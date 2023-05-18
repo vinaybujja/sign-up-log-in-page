@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>{{user.username}} is opening home page :)</h1>
+    <a href="logout">log out</a>
+    <a href="delete">delete account</a>
+    <a href="update">update account</a>
+{% else %}
+<h1>{{name}} is opening home page :)</h1>
+<a href="{% url 'logout' %}">log out</a>
+{% endif %}
+
+<!--html code here-->
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete</title>
+</head>
+<body>
+    <h1>do you want to delete {{user.username}} account</h1>
+    <form action="delete" id="conf" method="post">
+    {% csrf_token %}
+    <button type="submit" name='conformation' value='yes'>yes</button>
+    <button type="submit" name='conformation' value='no'>no</button>
+    </form>
+</body>
+</html>
